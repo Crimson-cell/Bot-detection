@@ -1,0 +1,18 @@
+{
+  "name": "bot-detection",
+  "version": "1.0.0",
+  "description": "Back end processing of mouse behavior",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Benedict Howard",
+  "license": "ISC",
+  "dependencies": {
+    "c4.5": "^0.0.3",
+    "csv": "^5.5.0",
+    "esm": "^3.2.25",
+    "firebase": "^8.9.0"
+  }
+}

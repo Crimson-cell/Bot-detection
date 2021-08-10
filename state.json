@@ -1,0 +1,7 @@
+{
+"features":["attr1","attr2","attr3"],
+"targets":["CLASS1","CLASS2"],
+"target":"class",
+"model":
+    {"name":"attr3",
+    "type":"feature_category","values":[{"name":"True","type":"feature_value","child":{"name":"attr1","type":"feature_category","values":[{"name":"A","type":"feature_value","child":{"name":"attr2","type":"feature_number","cut":70,"values":[{"name":"70","type":"feature_value","child":{"type":"result","value":"CLASS2","name":"CLASS2"}},{"name":"70","type":"feature_value","child":{"type":"result","value":"CLASS1","name":"CLASS1"}}]}},{"name":"B","type":"feature_value","child":{"type":"result","value":"CLASS1","name":"CLASS1"}},{"name":"C","type":"feature_value","child":{"type":"result","value":"CLASS2","name":"CLASS2"}}]}},{"name":"False","type":"feature_value","child":{"name":"attr1","type":"feature_category","values":[{"name":"A","type":"feature_value","child":{"name":"attr2","type":"feature_number","cut":70,"values":[{"name":"70","type":"feature_value","child":{"type":"result","value":"CLASS2","name":"CLASS2"}},{"name":"70","type":"feature_value","child":{"type":"result","value":"CLASS1","name":"CLASS1"}}]}},{"name":"B","type":"feature_value","child":{"type":"result","value":"CLASS1","name":"CLASS1"}},{"name":"C","type":"feature_value","child":{"type":"result","value":"CLASS1","name":"CLASS1"}}]}}]}}
