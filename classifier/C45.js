@@ -46,7 +46,7 @@ fs.readFile(__dirname + '/data/data.csv', function(err, data) {
       console.log(model.classify(testData[1]) === 'CLASS2'); // true
     });
     console.log(c45);
-    fs.writeFileSync('state2.json', c45.toJSON());
+    fs.writeFileSync('state.json', c45.toJSON());
   });
 
 });
