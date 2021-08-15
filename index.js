@@ -1,4 +1,5 @@
 var firebaseAPI = require('./firebase/firebase');
+var processor = require('./log processor/ActionParser');
 
 (async function myFunction(){
     await firebaseAPI.firestore.collection('cursorEvents').get()
@@ -12,12 +13,12 @@ var firebaseAPI = require('./firebase/firebase');
         return logs;
     })
     .then((logs) => {
-        var initialLog = logs.findIndex(element => element.user_id === '0000000000');
-        logs.splice(initialLog, 1);
-        logs.forEach(log => {
-            log.events.sort((a, b) => a.timestamp.localeCompare(b.timestamp));
+        logs = processor.cursorEventParser(logs);
+        logs = logs.map((log) => processor.actionProcessor(log, 4));
+
+        for (var log of logs) {
             console.log(JSON.stringify(log, null, 4));
-        }); 
+        }
         
     })
     .catch((err) => console.log(err));
